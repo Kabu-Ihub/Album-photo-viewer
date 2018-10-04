@@ -9,6 +9,6 @@ To run web app in linux:
 Screen shot;
     
     
-    ![alt tag](http://url/to/img.png)
+    ![alt tag](https://github.com/warui1738/Album-photo-viewer/blob/master/Album%20photo%20viewer.png)
 
 
