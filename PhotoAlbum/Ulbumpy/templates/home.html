@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<style>
+    img{
+        width: 15mm;
+        height: 15mm;
+    }
+</style>
+
+<header>
+  <h1 class="text text-info">This is the python Ultimate powered Photo album viewer</h1>
+
+  <small>This is a simple Program enabling you to be able to upload photos,give them a title and give a 
+    short description
+  </small>
+
+</header>
+<div>
+    <nav class="nav">
+        <a class="nav-link" href="{% url 'simple_upload' %}">Simple Photo Upload</a>
+        <a class="nav-link" href="{% url 'model_form_upload' %}">Model Form Upload</a><small>Upload an image</small>
+        <a class="nav-link" href="{% url 'try' %}">View Photo List</a><small>View Uploaded photos</small>
+        <a class="nav-link disabled" href="{% url 'try' %}">Delete</a>
+      </nav>
+</div>
+  <!-- <ul>
+    <li>
+      <a href="{% url 'simple_upload' %}">Simple Upload</a>
+    </li>
+    <li>
+      <a href="{% url 'model_form_upload' %}">Model Form Upload</a>
+    </li>
+  </ul> -->
+
+  <p class="text text-sucess">Uploaded files:</p>
+<div class="row">
+
+    {% for obj in documents %}
+      <li class="col">
+          <a href="{{obj.get_absolute_url}}" class="btn btn-primary">{{ obj.title}}</a>
+        <img src="{{obj.ImagePhoto.url}}" alt="" srcset="">
+      </li>
+    {% endfor %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>{% block head_title %}{{instance.title}} | {{block.super}}
+        {% endblock head_title %}
+       </title>
+<style>
+    
+</style>
+<div class="container">
+     <h1>{{instance.title}} <h1><br/>
+     <img src="{{ instance.ImagePhoto.url }}" class="img-fluid" alt="Responsive image"><br/>
+     {{instance.Description}}<br/>
+</div>
+{% endblock content %}
