@@ -9,6 +9,6 @@ To run web app in linux:
 Screen shot;
     
     
-   <img align="left" width="100" height="100" src="http://www.fillmurray.com/100/100">
+   <img align="left" src="https://github.com/warui1738/Album-photo-viewer/blob/master/Album%20photo%20viewer.png">
 
 
